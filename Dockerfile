@@ -7,8 +7,10 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 # update the repository sources list
 # and install dependencies
 RUN apt-get update \
-    && apt-get install -y curl \
+    && apt-get install -y curl ruby-full ruby-dev make build-essential git \
     && apt-get -y autoclean
+
+RUN gem install compass
 
 # nvm environment variables
 ENV NVM_DIR /usr/local/nvm
@@ -31,9 +33,6 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 # confirm installation
 RUN node -v
 RUN npm -v
-
-RUN apt-get install -y ruby-full ruby-dev make build-essential git
-RUN gem install compass
 
 RUN mkdir /usr/app
 
