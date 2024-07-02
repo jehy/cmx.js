@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+    cmx_js:
+        image: ghcr.io/jehy/cmx.js:master #221b81b3b825
+        container_name: cmx_js
+        ports:
+            - "127.0.0.1:9013:9000"
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '1'
+                    memory: 1G
