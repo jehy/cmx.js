@@ -1,4 +1,4 @@
-define ['cmx/XKCD'], (XKCD) ->
+define ['cmx/xkcd'], (XKCD) ->
 
   # magic evaluator
   ξ = (thing, fn) ->
