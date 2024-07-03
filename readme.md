@@ -17,3 +17,7 @@ Or you can use [docker image](docker-compose.yml).
 I did not publish it as service because it contains many critical vulnerabilities and I don't recommend doing it.
 
 No other changes besides fixes are done - it should look exactly like many years ago. All credits go to original author.
+
+## Known bugs
+
+Sometimes borders in the image are misplaced. Clicking `apply` another time fixes it.
