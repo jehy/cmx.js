@@ -29,10 +29,6 @@ module.exports = function(grunt) {
         files: ['test/spec/*.coffee'],
         tasks: ['coffee:test']
       },
-      compass: {
-        files: ['<%= yeoman.app %>/styles/*.{scss,sass}'],
-        tasks: ['compass']
-      },
       livereload: {
         files: ['<%= yeoman.app %>/*.html', '{.tmp,<%= yeoman.app %>}/styles/*.css', '{.tmp,<%= yeoman.app %>}/scripts/*.js', '<%= yeoman.app %>/images/*.{png,jpg,jpeg}'],
         tasks: ['livereload']
@@ -109,23 +105,6 @@ module.exports = function(grunt) {
           src: '*.coffee',
           dest: 'test/spec'
         }]
-      }
-    },
-    compass: {
-      options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: 'app/components',
-        relativeAssets: true
-      },
-      dist: {},
-      server: {
-        options: {
-          debugInfo: true
-        }
       }
     },
     // not used since Uglify task does concat,
@@ -278,15 +257,15 @@ module.exports = function(grunt) {
       return grunt.task.run(['open', 'connect:dist:keepalive']);
     }
 
-    grunt.task.run(['clean:server', 'coffee:dist', 'compass:server', 'livereload-start', 'connect:livereload', 'watch']);
+    grunt.task.run(['clean:server', 'coffee:dist', 'livereload-start', 'connect:livereload', 'watch']);
   });
 
-  grunt.registerTask('test', ['clean:server', 'coffee', 'compass', 'connect:test', 'mocha']);
+  grunt.registerTask('test', ['clean:server', 'coffee', 'connect:test', 'mocha']);
 
   grunt.registerTask('build', ['clean:dist',
   // 'jshint',
   // 'test',
-  'coffee', "copy:skelet", 'compass:dist', 'useminPrepare', 'requirejs', 'imagemin', 'cssmin', 'htmlmin', 'concat',
+  'coffee', 'copy:skelet', 'useminPrepare', 'requirejs', 'imagemin', 'cssmin', 'htmlmin', 'concat',
   // 'uglify',
   'copy', 'usemin']);
 
