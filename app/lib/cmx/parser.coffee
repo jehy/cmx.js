@@ -45,13 +45,14 @@ define [
 
       # attributes may be applied via CSS content property
       content = _.str.trim($el.css('content'), " \t\n'")
-      if content and content isnt "none" # Firefox returns "none"
+      if content and content isnt "none"  and content isnt "normal" # Firefox returns "none"
         content = "{#{content}}" if content[0]!="{"
         try
           params = $.parseJSON content # TODO: use some non-strict parser for JSON-like data
           $.extend res, params
         catch e
           console.error e
+          console.error content
 
       # collect native attributes
       for attr in $el.get(0).attributes
