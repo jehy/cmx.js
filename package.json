@@ -3,20 +3,21 @@
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
+    "bower": "1.8.14",
     "grunt": "0.4.0",
     "grunt-cli": "0.1.13",
-    "grunt-contrib-clean": "0.4.0rc6",
+    "grunt-contrib-clean": "0.4.0-rc6",
     "grunt-contrib-coffee": "0.4.0",
-    "grunt-contrib-compass": "0.1.1rc8",
-    "grunt-contrib-concat": "0.1.2rc6",
-    "grunt-contrib-connect": "0.1.1rc6",
+    "grunt-contrib-compass": "0.1.1-rc8",
+    "grunt-contrib-concat": "0.1.2-rc6",
+    "grunt-contrib-connect": "0.1.1-rc6",
     "grunt-contrib-copy": "0.4.0",
-    "grunt-contrib-htmlmin": "0.1.1rc7",
-    "grunt-contrib-imagemin": "0.1.1rc8",
-    "grunt-contrib-jshint": "0.1.1rc6",
-    "grunt-contrib-livereload": "0.1.0rc8",
+    "grunt-contrib-htmlmin": "0.1.1-rc7",
+    "grunt-contrib-imagemin": "0.1.1-rc8",
+    "grunt-contrib-jshint": "0.1.1-rc6",
+    "grunt-contrib-livereload": "0.1.0-rc8",
     "grunt-contrib-mincss": "0.4.0-rc7",
-    "grunt-contrib-uglify": "0.1.1rc6",
+    "grunt-contrib-uglify": "0.1.1-rc6",
     "grunt-mocha": "1.2.0",
     "grunt-open": "~0.1.0",
     "grunt-regarde": "~0.1.1",
@@ -25,6 +26,6 @@
     "matchdep": "~0.1.1"
   },
   "engines": {
-    "node": ">=0.8.0"
+    "node": "8.17.0"
   }
 }
