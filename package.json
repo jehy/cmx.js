@@ -20,10 +20,7 @@
     "grunt-regarde": "~0.1.1",
     "grunt-requirejs": "~0.4.0",
     "grunt-usemin": "~0.1.7",
-    "jquery": "1.9.1",
-    "matchdep": "~0.1.1",
-    "modernizr": "3.13.0",
-    "requirejs": "~2.1.4"
+    "matchdep": "~0.1.1"
   },
   "engines": {
     "node": ">=22.0"

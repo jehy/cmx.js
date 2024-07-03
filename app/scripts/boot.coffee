@@ -17,7 +17,6 @@ loadDisqus = ->
 displayHomepage = ->
   $('html').addClass 'force-vscrollbar'
   $("#homepage").css "display", "block"
-  _gaq.push ['_trackPageview'] # standard pageview
   loadDisqus()
 
 loadAndDisplayGist = (gistId) ->
@@ -57,7 +56,6 @@ loadAndDisplayGist = (gistId) ->
     $("#error-gist-number").text "#" + gistId
     $("#error-gist-link").attr("href", src).text src
     $("#error-gist-index-link").attr "href", "https://gist.github.com/" + gistId
-    _gaq.push ['_trackPageview', '/error/'+gistId] # virtual error pageview
     console.log "failed to fetch the gist content"
 
   $(document).ajaxError fail
@@ -165,9 +163,6 @@ loadAndDisplayGist = (gistId) ->
     doc.open()
     doc.write comix
     doc.close()
-
-    _gaq.push ['_trackPageview', '/gist/'+gistId] # virtual gist pageview
-
 $ ->
 
   hash = location.hash.substring(1)
