@@ -1,4 +1,3 @@
-version: "3.7"
 services:
     cmx_js:
         image: ghcr.io/jehy/cmx.js:master
